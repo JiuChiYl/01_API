@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/jquery.min.js"></script> -->
+</head>
+<style>
+.dis{
+    width: 500px;
+}
+</style>
+<body>
+    <script>
+        function lik(){
+            document.getElementById("pl").style.display = "contents";
+            document.getElementById("xs").style.display = "none";
+            document.getElementById("yc").style.display = "block";
+        }
+        function non(){
+            document.getElementById("pl").style.display = "none";
+            document.getElementById("xs").style.display = "block";
+            document.getElementById("yc").style.display = "none";
+        }
+    </script>
+    <div class="dis">
+        <span>《总是有爱在隔离》由香港演艺人协会、香港电影工作者总会发起，谷德昭执导，曾志伟、</span>
+        <span id="pl" style="display:none;">黄百鸣、成龙、梁家辉、许冠文、吴镇宇、林家栋、方力申、张智霖、刘心悠、薛凯琪、陈家乐、古天乐等主演的喜剧电影，于2021年4月22日在中国香港上映，并于5月4日在爱奇艺独家网络播出 [6]  。
+            该片讲述了众人在突如其来的危难中，共同感悟生命真谛的故事。</span>
+        <a id="xs" onclick="lik()" style="color: red;display: block;">显示更多</a>
+        <a id="yc" style="display: none;color:red" onclick="non()">隐藏</a>
+    </div>
+</body>
+</html>

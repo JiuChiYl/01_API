@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏</title>
+    <style>
+        #show div{
+            background-color: black;
+            width: 30px;
+            height: 2px;
+            margin-top: 8px;
+        }
+        #show {
+            width: 30px;
+            height: 22px;
+            transition: all 0.2s linear;
+            cursor: pointer;
+            transform: rotate(90deg);
+            margin-left: 20px;
+            margin-top: 400px;
+        }
+        /*#show:hover{
+            transform: rotate(90deg);
+        }*/
+        .giped{
+            
+            background-color: rgba(0, 0, 0, 0.493);
+           transition: all 0.3s ease-out;
+            height: 800px;
+            float: left;
+            margin-left: -10px;
+            margin-top: 20px;
+            width: 55px;
+            border-top-right-radius: 5px;
+            border-end-end-radius: 5px;
+        }
+        #heid{
+            font-size: 40px;
+            /* display: none; */
+            cursor: pointer;
+            float: right;
+            margin-right: 10px;
+            color: #FFF;
+        }
+        .labtx li img{
+            width: 50px;
+            animation: sow 0.3s linear;
+            border-radius: 3px;
+            display: none;
+        }
+        @keyframes sow{
+            0%{margin-top: 20px;opacity: 0;}
+            50%{margin-top:-10px;}
+            100%{margin-top: 0px; opacity: 1;}
+        }
+        .labtx li{
+            float: left;
+            padding-left: 15px;
+            padding-top: 10px;
+            
+        }
+        .labtx{
+            width: 400px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var paii = [ "55px", "500px","55px"];
+        var sty = ["none", "block", "none"];
+        var rod = ["90deg", "180deg", "90deg"];
+        var mar = ["20px", "460px", "20px"];
+        var oi = 0;
+        function show() {
+            if (oi === (paii.length - 1)) oi = 0;
+            oi++;
+            var divs = document.getElementsByClassName("giped")[0];
+            divs.style.width = paii[oi];
+            setTimeout(function () { document.getElementById("ig1").style.display = sty[oi]; }, 400);
+            setTimeout(function () { document.getElementById("ig2").style.display = sty[oi]; }, 500);
+            setTimeout(function () { document.getElementById("ig3").style.display = sty[oi]; }, 600);
+            setTimeout(function () { document.getElementById("ig4").style.display = sty[oi]; }, 700);
+            setTimeout(function () { document.getElementById("ig5").style.display = sty[oi]; }, 800);
+            if (oi ==  2) {
+                setTimeout(function () { document.getElementById("ig1").style.display = sty[oi]; }, 60);
+                setTimeout(function () { document.getElementById("ig2").style.display = sty[oi]; }, 70);
+                setTimeout(function () { document.getElementById("ig3").style.display = sty[oi]; }, 80);
+                setTimeout(function () { document.getElementById("ig4").style.display = sty[oi]; }, 90);
+                setTimeout(function () { document.getElementById("ig5").style.display = sty[oi]; }, 100);
+            }
+            document.getElementById("show").style.transform = "rotate(" + rod[oi] + ")";
+            document.getElementById("show").style.marginLeft = mar[oi];
+        }
+        
+            
+               
+            
+        function hided() {
+            if (oi === (paii.length - 1)) oi = 0;
+            oi++;
+            var divs = document.getElementsByClassName("giped")[0];
+            divs.style.width = paii[oi];
+            document.getElementById("ig1").style.display = sty[oi];
+            document.getElementById("ig2").style.display = sty[oi];
+            document.getElementById("ig3").style.display = sty[oi];
+            document.getElementById("ig4").style.display = sty[oi];
+            document.getElementById("ig5").style.display = sty[oi];
+            }
+        
+        
+    </script>
+    
+    <div class="giped" id="cbl">
+        <ul type="none" class="labtx">
+            <li><img id="ig1" src="tximg/1.jpeg" alt="" srcset=""></li>
+            <li><img id="ig2" src="tximg/2.jpeg" alt="" srcset=""></li>
+            <li><img id="ig3" src="tximg/bbw.jpeg" alt="" srcset=""></li>
+            <li><img id="ig4" src="tximg/13.jpeg" alt="" srcset=""></li>
+            <li><img id="ig5" src="tximg/5.jpeg" alt="" srcset=""></li>
+        </ul>
+        <div id="show" onclick="show()">
+            <div id="dip1"></div>
+            <div id="dip2"></div>
+            <div></div>
+        </div>
+        <!--<span id="heid" onclick="hided()">×</span>-->
+        
+    </div>
+</body>
+</html>
